@@ -3,49 +3,50 @@ import { Brain, Users, Clock, Puzzle, MessageSquare, Target, TrendingUp, Star } 
 import Reveal from './Reveal'
 
 const skills = [
-  { label: 'Critical Thinking', icon: Brain, size: 'text-lg px-6 py-3' },
-  { label: 'Team Collaboration', icon: Users, size: 'text-base px-5 py-2.5' },
-  { label: 'Deadline Management', icon: Clock, size: 'text-lg px-6 py-3' },
-  { label: 'Problem-Solving', icon: Puzzle, size: 'text-base px-5 py-2.5' },
-  { label: 'Communication', icon: MessageSquare, size: 'text-sm px-4 py-2' },
-  { label: 'Goal-Oriented', icon: Target, size: 'text-base px-5 py-2.5' },
-  { label: 'Adaptability', icon: TrendingUp, size: 'text-sm px-4 py-2' },
-  { label: 'Attention to Detail', icon: Star, size: 'text-base px-5 py-2.5' },
+  { label: 'Critical Thinking', icon: Brain, color: '#6C63FF' },
+  { label: 'Team Collaboration', icon: Users, color: '#E8A598' },
+  { label: 'Deadline Management', icon: Clock, color: '#8B85FF' },
+  { label: 'Problem-Solving', icon: Puzzle, color: '#6C63FF' },
+  { label: 'Communication', icon: MessageSquare, color: '#E8A598' },
+  { label: 'Goal-Oriented', icon: Target, color: '#8B85FF' },
+  { label: 'Adaptability', icon: TrendingUp, color: '#6C63FF' },
+  { label: 'Attention to Detail', icon: Star, color: '#E8A598' },
 ]
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-6 md:px-16 lg:px-24">
-      <div className="max-w-4xl mx-auto text-center">
+    <section id="skills" className="py-28 px-6 md:px-16 lg:px-24"
+      style={{ background: 'rgba(18,18,42,0.5)' }}>
+      <div className="max-w-4xl mx-auto">
         <Reveal>
-          <p className="text-gold text-sm font-semibold tracking-[0.3em] uppercase mb-2">Skills</p>
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-            Professional <span className="gold-text">Skill Cloud</span>
+          <p className="label mb-4">Skills</p>
+          <div className="section-divider" />
+          <h2 className="font-extrabold mb-3" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', color: '#F5F0EB' }}>
+            Core <span className="accent-text">Competencies</span>
           </h2>
-          <p className="text-slate-400 mb-14 max-w-xl mx-auto">
-            Core competencies that drive results and build exceptional workplace cultures.
+          <p className="mb-14 max-w-xl text-sm" style={{ color: '#8892A4' }}>
+            Professional skills that drive results and build exceptional workplace cultures.
           </p>
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="flex flex-wrap justify-center gap-4">
-            {skills.map(({ label, icon: Icon, size }, i) => (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {skills.map(({ label, icon: Icon, color }, i) => (
               <motion.div
                 key={label}
-                className={`glass flex items-center gap-2.5 rounded-full font-semibold text-white border border-gold/10 cursor-default ${size}`}
-                initial={{ opacity: 0, scale: 0.7 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                className="flex flex-col items-center gap-3 p-6 rounded-2xl cursor-default text-center"
+                style={{ background: 'rgba(26,26,53,0.6)', border: '1px solid rgba(108,99,255,0.1)' }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.07, type: 'spring', stiffness: 300 }}
-                whileHover={{
-                  scale: 1.1,
-                  borderColor: 'rgba(201,168,76,0.5)',
-                  backgroundColor: 'rgba(201,168,76,0.12)',
-                  boxShadow: '0 0 20px rgba(201,168,76,0.25)',
-                }}
+                transition={{ delay: i * 0.07, duration: 0.4 }}
+                whileHover={{ y: -5, borderColor: `${color}40`, background: `${color}0A` }}
               >
-                <Icon size={16} className="text-gold shrink-0" />
-                {label}
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center"
+                  style={{ background: `${color}15`, border: `1px solid ${color}25` }}>
+                  <Icon size={19} style={{ color }} />
+                </div>
+                <p className="text-sm font-semibold leading-tight" style={{ color: '#F5F0EB' }}>{label}</p>
               </motion.div>
             ))}
           </div>
