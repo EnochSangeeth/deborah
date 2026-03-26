@@ -35,32 +35,25 @@ export default function About() {
                 <div>
                   <h3 className="font-bold text-base t-text">Chansi Keren Ramachandren</h3>
                   <p className="text-xs mt-0.5 font-medium" style={{ color: 'var(--violet-light)' }}>
-                    HR Professional · Negombo, Sri Lanka
+                    <span className="font-semibold" style={{ color: 'var(--violet-light)' }}>HR Professional</span> · <span className="font-semibold" style={{ color: 'var(--gold)' }}>Dental Assistant</span> · Negombo, Sri Lanka
                   </p>
                 </div>
               </div>
 
               <p className="leading-[1.85] text-sm mb-5 t-muted">
-                Chansi Keren is a driven and detail-oriented{' '}
-                <span className="font-semibold t-text">HR professional</span> based in Negombo, Sri Lanka,
-                with hands-on experience in the full spectrum of human resources operations.
-                Since joining Tropic Frozen Foods in May 2024, she has played a pivotal role in shaping a
-                structured, compliant, and people-centred workplace.
+                Chansi Keren is a driven and multi-faceted professional based in{' '}
+                <span className="font-semibold t-text">Negombo</span>, Sri Lanka, with a versatile background spanning{' '}
+                <span className="font-semibold t-text">Human Resources</span> operations and clinical support. Currently excelling as a{' '}
+                <span className="font-semibold t-text">Dental Assistant</span> at Charming Dental Clinic since June 2025, she brings technical precision to patient care and sterilization protocols.
               </p>
               <p className="leading-[1.85] text-sm mb-5 t-muted">
-                Her expertise spans{' '}
-                <span className="font-semibold t-text">recruitment and talent acquisition</span> — from
-                crafting compelling job postings and screening candidates to orchestrating seamless onboarding
-                experiences that set new hires up for success from day one. She brings the same precision to
-                <span className="font-semibold t-text"> payroll administration</span>, attendance tracking,
-                and employee record management, ensuring operational accuracy across the board.
+                Her professional foundation was built at Tropic Frozen Foods (May 2024 – May 2025), where she played a pivotal role in shaping a structured, compliant, and people-centred workplace.
+                Her expertise there spanned the full HR spectrum—from recruitment and talent acquisition to{' '}
+                <span className="font-semibold t-text">payroll administration</span> and employee record management—making her a trusted partner in both corporate and clinical environments.
               </p>
               <p className="leading-[1.85] text-sm t-muted">
-                Backed by an{' '}
-                <span className="font-semibold t-text">AC in Human Resource Management</span> from the Open
-                University of Sri Lanka and a strong foundation in business, IT, and communication, Chansi
-                combines academic rigour with real-world empathy — making her a trusted partner for both
-                management and employees alike.
+                Backed by an <span className="font-semibold t-text">AC in Human Resource Management</span> from the Open University of Sri Lanka and a strong foundation in business, IT, and communication,
+                Chansi combines academic rigour with real-world empathy—making her a trusted partner in both corporate and clinical environments.
               </p>
 
               {/* Professional Goal */}
